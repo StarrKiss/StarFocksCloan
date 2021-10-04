@@ -37,14 +37,20 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\MouseFlight\Demo\Scripts\Hud.cs" />
+     <Compile Include="Assets\collisionManager.cs" />
+     <Compile Include="Assets\cameraMovement.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\boostManager.cs" />
+     <Compile Include="Assets\waterRaycaster.cs" />
+     <Compile Include="Assets\cameraSpeen.cs" />
+     <Compile Include="Assets\singleTrigger.cs" />
+     <Compile Include="Assets\CameraShake.cs" />
+     <Compile Include="Assets\triggerManager.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\starFoxMovement.cs" />
      <Compile Include="Assets\MouseFlight\Demo\Scripts\Plane.cs" />
-     <Compile Include="Assets\MouseFlight\Scripts\MouseFlightController.cs" />
-     <Compile Include="Assets\CameraShake.cs" />
      <Compile Include="Assets\UIManager.cs" />
+     <Compile Include="Assets\MouseFlight\Scripts\MouseFlightController.cs" />
      <None Include="Assets\URP_ShaderGraphCustomLighting\CustomLighting.hlsl" />
     <Reference Include="UnityEngine">
         <HintPath>/home/gstarr/Unity/Hub/Editor/2021.1.19f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

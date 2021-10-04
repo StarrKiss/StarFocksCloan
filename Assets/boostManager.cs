@@ -29,33 +29,85 @@ public class boostManager : MonoBehaviour
     public CameraShake cs;
 
     public Camera maincam;
+
+    public ParticleSystem engineBack;
+
+    public waterRaycaster mistManager;
+
+   
+
+    public Material boostParticles;
+     [ColorUsage(true, true)]
+    public Color defaultcolor;
+    
+     [ColorUsage(true, true)]
+    public Color boostColor;
+    public Material vaporCone;
+
+    public float lengthToVisible = 0.5f;
+
+    private float curLength = 0f;
+
+    private bool hasTriggered = false;
     // Start is called before the first frame update
     void Start()
     {
         cartman = gameObject.GetComponent<CinemachineDollyCart>();
         enginePlumes.SetFloat("hueOffset", 0);
         maincam = Camera.main;
+        vaporCone.SetFloat("alphaMultiplier", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        var main = engineBack.main;
+        var col = engineBack.colorOverLifetime;
         if(isBoosting){
             enginePlumes.SetFloat("hueOffset", hueOffset);
             cartman.m_Speed = boostSpeed;
             targetFOV = boostFOV;
             cs.shakeDuration = 0.1f;
-            cs.shakeAmount = 1;
+            cs.shakeAmount = 0.5f;
+            mistManager.isBoosting= true;
+            if( hasTriggered == false){
+                curLength = lengthToVisible;
+                 hasTriggered = true;
+                 
+            }
+
+            curLength -= Time.deltaTime;
+
+            if(curLength > 0){
+                vaporCone.SetFloat("alphaMultiplier", 1);
+                cs.shakeDuration = 0.3f;
+                cs.shakeAmount = 4;
+            }
+            else{
+                vaporCone.SetFloat("alphaMultiplier", 0);
+            }
+
+          
+            
+
+            boostParticles.SetColor("_EmissionColor", boostColor);
+            
             
         }
         else{
             enginePlumes.SetFloat("hueOffset", 0);
             cartman.m_Speed = mainSpeed;
             targetFOV = normalFOV;
+            mistManager.isBoosting= false;
+             hasTriggered = false;
+            vaporCone.SetFloat("alphaMultiplier", 0);
+            boostParticles.SetColor("_EmissionColor", defaultcolor);
         }
 
         currentFOV = Mathf.SmoothDamp(currentFOV,targetFOV, ref fovSmoothing, fovZoomTime);
         maincam.fieldOfView = currentFOV;
+
+        
     }
 
     
