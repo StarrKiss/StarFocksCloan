@@ -334,7 +334,13 @@
 "Assets/TutorialInfo/Scripts/Readme.cs"
 "Assets/UIManager.cs"
 "Assets/boostManager.cs"
+"Assets/cameraMovement.cs"
+"Assets/cameraSpeen.cs"
+"Assets/collisionManager.cs"
+"Assets/singleTrigger.cs"
 "Assets/starFoxMovement.cs"
+"Assets/triggerManager.cs"
+"Assets/waterRaycaster.cs"
 -langversion:8.0
 
 /deterministic

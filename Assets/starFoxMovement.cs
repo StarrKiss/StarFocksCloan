@@ -31,7 +31,7 @@ public class starFoxMovement : MonoBehaviour
 
     float xRotation = 15f;
 
-    float yRotation = 15f;
+    float yRotation = 10f;
 
     private float realRot = 0;
     
@@ -62,15 +62,22 @@ public class starFoxMovement : MonoBehaviour
 
     public UIManager man;
 
+    public collisionManager colMan;
+
     float map(float s, float a1, float a2, float b1, float b2)
 {
     return b1 + (s-a1)*(b2-b1)/(a2-a1);
 }
+
+float amountToRoll = 0f;
     // Start is called before the first frame update
     void Start()
     {
         actualSpeed = moveSpeed;
         currBoostLength = maxBoostLength;
+        amountToRoll = 360f/dodgeRollLength;
+
+        colMan = gameObject.GetComponent<collisionManager>();
     }
 
     // Update is called once per frame
@@ -125,7 +132,7 @@ public class starFoxMovement : MonoBehaviour
 
         
 
-        move();
+        
 
         Vector3 normVel = Vector3.Normalize(velocity);
 
@@ -134,29 +141,43 @@ public class starFoxMovement : MonoBehaviour
              targetRotation = xRotation * Input.GetAxis("Horizontal");
         }
         else{
-            targetRotation = graphicsRotation.z + (2880f * Time.deltaTime * -Mathf.Sign(dodgeRollVelocity));
+            targetRotation = graphicsRotation.z + (amountToRoll * Time.deltaTime * -Mathf.Sign(dodgeRollVelocity));
         }
         
-        Debug.Log(Input.GetKey(KeyCode.Joystick1Button5));
+        
 
         float targetYRotation = yRotation * Input.GetAxis("Vertical");
-
-        graphicsRotation.z = Mathf.SmoothDamp(graphicsRotation.z, targetRotation, ref rotationSmoothing, rotationAccelerationTime);
+        if(!isDodging){
+            graphicsRotation.z = Mathf.SmoothDamp(graphicsRotation.z, targetRotation, ref rotationSmoothing, rotationAccelerationTime);
+        }
+        graphicsRotation.z = targetRotation;
         graphicsRotation.x = Mathf.SmoothDamp(graphicsRotation.x, targetYRotation, ref rotationSmoothingY, rotationAccelerationTime);
         
 
         graphics.transform.localRotation = Quaternion.Euler(graphicsRotation);
+
+        move();
     }
 
     void move() {
+        /*
+        
         if(!checkForBounds(transform.localPosition,velocity).canMove){
             transform.localPosition += velocity * Time.deltaTime;
+            
         }else{
             
             velocity = Vector3.zero;
         }
+        */
+
+        transform.localPosition += colMan.checkMovement(velocity * Time.deltaTime);
+        
+        
         
     }
+
+
 
     colData checkForBounds(Vector3 curPos, Vector3 curVel){
         Vector3 tempMove = curPos + (curVel * Time.deltaTime);
