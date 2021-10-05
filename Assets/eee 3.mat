@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Outline:
+        m_Texture: {fileID: 2800000, guid: ce1b81ef3bf4f4d55a4c878dff861325, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_03c9d9bf52184cde9090d506f44db0d2:
         m_Texture: {fileID: 2800000, guid: ecb23393a0d1b424a82fff68a4c00a66, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -83,6 +87,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Boolean_70eff5d9523c40fabed57a17484380d7: 0
     - Vector1_4dfdc8c5c2494c32bb16aa4bc3e99e66: 1
