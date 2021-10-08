@@ -76,7 +76,7 @@ float amountToRoll = 0f;
         actualSpeed = moveSpeed;
         currBoostLength = maxBoostLength;
         amountToRoll = 360f/dodgeRollLength;
-
+    
         colMan = gameObject.GetComponent<collisionManager>();
     }
 
