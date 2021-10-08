@@ -20,9 +20,7 @@ public class collisionManager : MonoBehaviour
     private float castSpacingY;
     private float castSpacingZ;
 
-    private List<Vector3> placesToCastY = new List<Vector3>();
-
-    private List<Vector3> placesToCastX = new List<Vector3>();
+   
     // Start is called before the first frame update
     void Start()
     {

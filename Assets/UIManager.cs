@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public Slider boostGauge;
 
+    public Slider healthgauge;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,5 +17,8 @@ public class UIManager : MonoBehaviour
 
     public void updateGauge(float amount){
         boostGauge.value = amount;
+    }
+    public void updateHealthGauge(float amount){
+        healthgauge.value = amount;
     }
 }

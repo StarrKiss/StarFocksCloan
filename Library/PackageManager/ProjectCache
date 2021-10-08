@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637671043550000000
-    m_Hash: 700012842
+      ticks: 637693135170000000
+    m_Hash: 3713329443
   m_LockFileStatus:
     m_FilePath: /home/gstarr/Documents/celShadingTest/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637671043550000000
-    m_Hash: 2583487301
+      ticks: 637693135290000000
+    m_Hash: 3387042229
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: /home/gstarr/Documents/celShadingTest/Packages
-m_EditorVersion: 2021.1.19f1 (5f5eb8bbdc25)
+m_EditorVersion: 2021.1.24f1 (6667702a1e7c)
 m_ResolvedPackages:
 - packageId: com.unity.cinemachine@2.7.8
   testable: 0
@@ -93,14 +93,14 @@ m_ResolvedPackages:
     - 2.8.0-exp.2
     - 2.8.0-pre.1
     - 2.8.0
+    - 2.8.1
     compatible:
-    - 2.7.4
-    - 2.7.5
     - 2.7.8
     - 2.8.0-exp.1
     - 2.8.0-exp.2
     - 2.8.0-pre.1
     - 2.8.0
+    - 2.8.1
     verified: 2.7.8
   dependencies: []
   resolvedDependencies: []
@@ -148,14 +148,14 @@ m_ResolvedPackages:
     revision: 824e2935edd94d42dcf7b0be3b7e15e7f4da8647
     path: 
   unityLifecycle:
-    version: 2.7.4
-    nextVersion: 2.8.0-pre.1
-- packageId: com.unity.collab-proxy@1.9.0
+    version: 2.7.8
+    nextVersion: 
+- packageId: com.unity.collab-proxy@1.11.2
   testable: 0
   isDirectDependency: 1
-  version: 1.9.0
+  version: 1.11.2
   source: 1
-  resolvedPath: /home/gstarr/Documents/celShadingTest/Library/PackageCache/com.unity.collab-proxy@1.9.0
+  resolvedPath: /home/gstarr/Documents/celShadingTest/Library/PackageCache/com.unity.collab-proxy@1.11.2
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -196,6 +196,10 @@ m_ResolvedPackages:
     - 1.7.1
     - 1.8.0
     - 1.9.0
+    - 1.10.2
+    - 1.11.2
+    - 1.12.5
+    - 1.13.5
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -207,7 +211,9 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
-    - 1.9.0
+    - 1.11.2
+    - 1.12.5
+    - 1.13.5
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -218,7 +224,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 1.9.0
+    verified: 1.11.2
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -247,16 +253,16 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637637594290000000
+  datePublishedTicks: 637679178630000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 51447944a1e7d94937e6b7f9e887d58f5097ed13
+    revision: 3bc7fe2ab9acbe4538785fec6100ac17fe9e8da5
     path: 
   unityLifecycle:
-    version: 1.9.0
+    version: 1.11.2
     nextVersion: 
 - packageId: com.unity.ide.rider@3.0.7
   testable: 0
@@ -414,12 +420,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 2.0.11
     nextVersion: 
-- packageId: com.unity.ide.vscode@1.2.3
+- packageId: com.unity.ide.vscode@1.2.4
   testable: 0
   isDirectDependency: 1
-  version: 1.2.3
+  version: 1.2.4
   source: 1
-  resolvedPath: /home/gstarr/Documents/celShadingTest/Library/PackageCache/com.unity.ide.vscode@1.2.3
+  resolvedPath: /home/gstarr/Documents/celShadingTest/Library/PackageCache/com.unity.ide.vscode@1.2.4
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -449,7 +455,6 @@ m_ResolvedPackages:
     - 1.2.3
     - 1.2.4
     compatible:
-    - 1.2.3
     - 1.2.4
     verified: 1.2.4
   dependencies: []
@@ -467,16 +472,16 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637394922300000000
+  datePublishedTicks: 637660806170000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-    revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+    url: git+https://github.com/Unity-Technologies/com.unity.ide.vscode.git
+    revision: 1f4f605d5c988cb610c372b5c5216c46cc8f5d30
     path: 
   unityLifecycle:
-    version: 1.2.3
+    version: 1.2.4
     nextVersion: 
 - packageId: com.unity.render-pipelines.universal@11.0.0
   testable: 0
@@ -540,6 +545,7 @@ m_ResolvedPackages:
     - 10.5.0
     - 10.5.1
     - 10.6.0
+    - 10.7.0
     - 11.0.0
     compatible:
     - 11.0.0
@@ -576,13 +582,13 @@ m_ResolvedPackages:
   - render
   - pipeline
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1124,13 +1130,13 @@ m_ResolvedPackages:
   - Unity UI
   - Canvas
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1175,13 +1181,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1225,13 +1231,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1276,13 +1282,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1327,13 +1333,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1378,13 +1384,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1433,13 +1439,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1492,13 +1498,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1544,13 +1550,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1595,13 +1601,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1646,13 +1652,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1697,13 +1703,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1748,13 +1754,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1799,13 +1805,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1854,13 +1860,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1905,13 +1911,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -1964,13 +1970,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2018,13 +2024,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2069,13 +2075,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2136,13 +2142,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2187,13 +2193,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2246,13 +2252,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2297,13 +2303,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2356,13 +2362,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2415,13 +2421,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2474,13 +2480,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2549,13 +2555,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2604,13 +2610,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2667,13 +2673,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2732,13 +2738,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2783,13 +2789,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2846,13 +2852,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2901,13 +2907,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -2963,13 +2969,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -3230,9 +3236,11 @@ m_ResolvedPackages:
     - 1.1.0-preview.1
     - 1.1.0
     - 1.2.1
+    - 1.2.4
     compatible:
     - 1.2.1
-    verified: 1.2.1
+    - 1.2.4
+    verified: 1.2.4
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -3378,6 +3386,7 @@ m_ResolvedPackages:
     - 10.5.0
     - 10.5.1
     - 10.6.0
+    - 10.7.0
     - 11.0.0
     compatible:
     - 11.0.0
@@ -3398,13 +3407,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
@@ -3535,6 +3544,7 @@ m_ResolvedPackages:
     - 10.5.0
     - 10.5.1
     - 10.6.0
+    - 10.7.0
     - 11.0.0
     compatible:
     - 11.0.0
@@ -3559,13 +3569,13 @@ m_ResolvedPackages:
     version: 4.3.2
   keywords: []
   registry:
-    id: 
+    id: main
     name: 
-    url: 
+    url: https://packages.unity.com
     scopes: []
-    isDefault: 0
-    capabilities: 0
-  hasRegistry: 0
+    isDefault: 1
+    capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   entitlements:
     isAllowed: 1
