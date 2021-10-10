@@ -310,6 +310,7 @@
 -r:"/home/gstarr/Unity/Hub/Editor/2021.1.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/2400b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.Mathematics.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"

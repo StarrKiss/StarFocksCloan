@@ -109,6 +109,7 @@
 -define:CINEMACHINE_PHYSICS
 -define:CINEMACHINE_UGUI
 -define:CINEMACHINE_LWRP_7_3_1
+-define:CINEMACHINE_UNITY_INPUTSYSTEM
 -define:CINEMACHINE_UNITY_ANIMATION
 -define:CINEMACHINE_UNITY_IMGUI
 -define:CSHARP_7_OR_LATER
@@ -313,6 +314,7 @@
 -r:"/home/gstarr/Unity/Hub/Editor/2021.1.24f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
 -r:"/home/gstarr/Unity/Hub/Editor/2021.1.24f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll"
 -r:"/home/gstarr/Unity/Hub/Editor/2021.1.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:"Library/Bee/artifacts/2400b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.RenderPipelines.Universal.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.Timeline.ref.dll"

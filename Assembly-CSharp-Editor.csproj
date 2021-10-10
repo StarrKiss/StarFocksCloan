@@ -685,8 +685,8 @@
     <Reference Include="UnityEditor.UI">
         <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+    <Reference Include="Unity.InputSystem">
+        <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
@@ -696,6 +696,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+        <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
         <HintPath>/home/gstarr/Documents/celShadingTest/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>

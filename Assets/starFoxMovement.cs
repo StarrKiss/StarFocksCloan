@@ -19,6 +19,8 @@ public class starFoxMovement : MonoBehaviour
 
      [HideInInspector]
     public Vector3 velocity;
+    
+    public MainPiloting newControls;
  
     float velocityXSmoothing;
 
@@ -69,6 +71,11 @@ public class starFoxMovement : MonoBehaviour
     return b1 + (s-a1)*(b2-b1)/(a2-a1);
 }
 
+void Awake(){
+        newControls = new MainPiloting();
+        newControls.Enable();
+    }
+
 float amountToRoll = 0f;
     // Start is called before the first frame update
     void Start()
@@ -85,8 +92,11 @@ float amountToRoll = 0f;
     {
         Vector3 turnMovement = Vector3.zero;
         
-        turnMovement += Input.GetAxis("Horizontal") * Vector3.left;
-        turnMovement += Input.GetAxis("Vertical") * Vector3.up;
+        Vector2 input = newControls.Player.Move.ReadValue<Vector2>();
+        turnMovement +=  input.x * Vector3.left;
+        turnMovement += input.y * Vector3.up;
+
+        Debug.Log(input);
         
 
         float targetVelocityX = turnMovement.x * actualSpeed;
@@ -96,16 +106,16 @@ float amountToRoll = 0f;
         velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTime);
         velocity.y = Mathf.SmoothDamp(velocity.y, targetVelocityZ, ref velocityZSmoothing, accelerationTime);
 
-        if(Input.GetKeyDown(KeyCode.Joystick1Button5)){
+        if(newControls.Player.DodgeRollLeft.triggered){
             currLength = dodgeRollLength;
             dodgeRollVelocity = -dodgeRollSpeed;
         }
-        if(Input.GetKeyDown(KeyCode.Joystick1Button4)){
+        if(newControls.Player.DodgeRollRight.triggered){
             currLength = dodgeRollLength;
             dodgeRollVelocity = dodgeRollSpeed;
         }
 
-        if(Input.GetKey(KeyCode.Joystick1Button1)){
+        if(newControls.Player.Boost.ReadValue<float>() > 0.1f){
             if(currBoostLength > 0 ){
                 bm.isBoosting = true;
                 currBoostLength = currBoostLength - Time.deltaTime;
@@ -130,15 +140,11 @@ float amountToRoll = 0f;
             isDodging = false;
         }
 
-        
-
-        
-
         Vector3 normVel = Vector3.Normalize(velocity);
 
         float targetRotation = 0f;
         if(!isDodging){
-             targetRotation = xRotation * Input.GetAxis("Horizontal");
+             targetRotation = xRotation * input.x;
         }
         else{
             targetRotation = graphicsRotation.z + (amountToRoll * Time.deltaTime * -Mathf.Sign(dodgeRollVelocity));
@@ -146,7 +152,7 @@ float amountToRoll = 0f;
         
         
 
-        float targetYRotation = yRotation * Input.GetAxis("Vertical");
+        float targetYRotation = yRotation * input.y;
         if(!isDodging){
             graphicsRotation.z = Mathf.SmoothDamp(graphicsRotation.z, targetRotation, ref rotationSmoothing, rotationAccelerationTime);
         }

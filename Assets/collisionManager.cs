@@ -41,9 +41,6 @@ public class collisionManager : MonoBehaviour
     // Update is called once per frame
     public Vector3 checkMovement(Vector3 offset){
         
-        
-        
-
         Vector3 finalOutput = offset;
 
         float finalY = offset.y;
@@ -71,7 +68,7 @@ public class collisionManager : MonoBehaviour
                         
                             if(Mathf.Abs(inputY) > (hit.distance - colliderBounds.extents.y)){
                                 finalY = 0; //((hit.distance) - 0.5f) * Mathf.Sign(inputY);
-                                Debug.Log("TRIGGERED");
+                                
                             }  
                         }else{
                             Debug.DrawRay(posToCheck, ((Mathf.Sign(inputY) == -1)?down:up) * 5, Color.green);
@@ -94,7 +91,7 @@ public class collisionManager : MonoBehaviour
                         
                             if(Mathf.Abs(inputX) > (hit.distance - colliderBounds.extents.x)-0.01f){
                                 finalX = 0; //((hit.distance) - 0.5f) * Mathf.Sign(inputX);
-                                Debug.Log("TRIGGERED");
+                                
                             }  
                         }else{
                             Debug.DrawRay(posToCheck, ((Mathf.Sign(inputX) == -1)?left:right) * 5, Color.green);

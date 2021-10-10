@@ -21,6 +21,7 @@ public class waterRaycaster : MonoBehaviour
 
     public bool isBoosting;
     
+    MainPiloting newControls;
 
     public float boostMultipler = 1.5f;
 
@@ -38,6 +39,11 @@ public class waterRaycaster : MonoBehaviour
     void Start()
     {
         
+    }
+
+    void Awake(){
+        newControls = new MainPiloting();
+        newControls.Enable();
     }
 
     float map(float s, float a1, float a2, float b1, float b2)
@@ -74,7 +80,7 @@ public class waterRaycaster : MonoBehaviour
 
         waterSpike.transform.localScale = currentScale;
 
-        targetYRotation = xRotation * Input.GetAxis("Horizontal");
+        targetYRotation = xRotation * newControls.Player.Move.ReadValue<Vector2>().x;
         
 
         waterspikeRot.z = Mathf.SmoothDamp(waterspikeRot.z, targetYRotation, ref rotationSmoothing, rotationAccelerationTime);
