@@ -6,9 +6,7 @@
 [Bb]uild
 /[Bb]uilds/
 /[Ll]ibrary/
-Library/
 Logs/
-Library/ArtifactDB
 sysinfo.txt
 *.stackdump
 /Assets/AssetStoreTools*
