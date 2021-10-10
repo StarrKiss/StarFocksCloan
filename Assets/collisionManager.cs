@@ -33,11 +33,6 @@ public class collisionManager : MonoBehaviour
         castSpacingZ = (colliderBounds.extents.z * 2) / numberOfCastsZ;        
     }
 
-    private void Update() {
-        
-        
-    }
-
     // Update is called once per frame
     public Vector3 checkMovement(Vector3 offset){
         

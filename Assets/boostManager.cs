@@ -34,7 +34,7 @@ public class boostManager : MonoBehaviour
 
     public waterRaycaster mistManager;
 
-   
+   //--------------------------------
 
     public Material boostParticles;
      [ColorUsage(true, true)]
@@ -84,15 +84,17 @@ public class boostManager : MonoBehaviour
                 cs.shakeAmount = 4;
             }
             else{
-                vaporCone.SetFloat("alphaMultiplier", 0);
+                if(vaporCone.GetFloat("alphaMultiplier") > 0f){
+                    vaporCone.SetFloat("alphaMultiplier", vaporCone.GetFloat("alphaMultiplier") - (15f * Time.deltaTime));
+                }
+                else{
+                    vaporCone.SetFloat("alphaMultiplier",0f);
+                }
+                
             }
 
-          
-            
-
             boostParticles.SetColor("_EmissionColor", boostColor);
-            
-            
+
         }
         else{
             enginePlumes.SetFloat("hueOffset", 0);
@@ -100,7 +102,13 @@ public class boostManager : MonoBehaviour
             targetFOV = normalFOV;
             mistManager.isBoosting= false;
              hasTriggered = false;
-            vaporCone.SetFloat("alphaMultiplier", 0);
+            
+            if(vaporCone.GetFloat("alphaMultiplier") > 0f){
+                    vaporCone.SetFloat("alphaMultiplier", vaporCone.GetFloat("alphaMultiplier") - (15f * Time.deltaTime));
+            }
+            else{
+                vaporCone.SetFloat("alphaMultiplier",0f);
+            }
             boostParticles.SetColor("_EmissionColor", defaultcolor);
         }
 

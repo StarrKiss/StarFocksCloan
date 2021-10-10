@@ -1110,8 +1110,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -917.6087036132813,
-            "y": 330.39129638671877,
+            "x": -939.0000610351563,
+            "y": 352.0000305175781,
             "width": 208.0,
             "height": 302.0
         }
@@ -1502,8 +1502,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -532.0,
-            "y": 95.0,
+            "x": -416.0000915527344,
+            "y": 149.00001525878907,
             "width": 208.0,
             "height": 302.0
         }
@@ -1564,8 +1564,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -378.00006103515627,
-            "y": 119.0,
+            "x": -208.0,
+            "y": 173.00001525878907,
             "width": 208.0,
             "height": 278.0
         }
@@ -1658,7 +1658,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "e00": 7.0,
+        "e00": 1.0,
         "e01": 2.0,
         "e02": 2.0,
         "e03": 2.0,
