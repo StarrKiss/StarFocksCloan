@@ -49,6 +49,8 @@ public class boostManager : MonoBehaviour
     private float curLength = 0f;
 
     private bool hasTriggered = false;
+
+    public ParticleSystem speedLines;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +75,8 @@ public class boostManager : MonoBehaviour
             if( hasTriggered == false){
                 curLength = lengthToVisible;
                  hasTriggered = true;
-                 
+                 var emission = speedLines.emission;
+                 emission.enabled = true;
             }
 
             curLength -= Time.deltaTime;
@@ -81,7 +84,7 @@ public class boostManager : MonoBehaviour
             if(curLength > 0){
                 vaporCone.SetFloat("alphaMultiplier", 1);
                 cs.shakeDuration = 0.3f;
-                cs.shakeAmount = 4;
+                cs.shakeAmount = 5.5f;
             }
             else{
                 if(vaporCone.GetFloat("alphaMultiplier") > 0f){
@@ -110,6 +113,9 @@ public class boostManager : MonoBehaviour
                 vaporCone.SetFloat("alphaMultiplier",0f);
             }
             boostParticles.SetColor("_EmissionColor", defaultcolor);
+
+             var emission = speedLines.emission;
+            emission.enabled = false;
         }
 
         currentFOV = Mathf.SmoothDamp(currentFOV,targetFOV, ref fovSmoothing, fovZoomTime);

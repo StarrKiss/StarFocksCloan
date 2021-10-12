@@ -15,6 +15,16 @@ public class CameraShake : MonoBehaviour
 	public float decreaseFactor = 1.0f;
 	
 	Vector3 originalPos;
+
+	public Vector3 shiftPosition = Vector3.zero;
+
+	public Vector3 targetPos;
+
+	private Vector3 truPos;
+
+	//---- Smoothing -----
+	Vector3 smoothingVal;
+	float accelerationTime;
 	
 	void Awake()
 	{
@@ -27,20 +37,30 @@ public class CameraShake : MonoBehaviour
 	void OnEnable()
 	{
 		originalPos = camTransform.localPosition;
+
+		truPos = originalPos;
+		targetPos = truPos;
 	}
 
 	void Update()
 	{
+
+		//truPos = Vector3.SmoothDamp(truPos, targetPos, ref smoothingVal, accelerationTime);
+		Vector3 tempPos;
+
+		if(shiftPosition != Vector3.zero){
+			tempPos = shiftPosition;
+		}
 		if (shakeDuration > 0)
 		{
-			camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+			camTransform.localPosition = truPos + (Random.insideUnitSphere + shiftPosition) * shakeAmount;
 			
 			shakeDuration -= Time.deltaTime * decreaseFactor;
 		}
 		else
 		{
 			shakeDuration = 0f;
-			camTransform.localPosition = originalPos;
+			camTransform.localPosition = truPos;
 		}
 	}
 }

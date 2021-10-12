@@ -66,6 +66,8 @@ public class starFoxMovement : MonoBehaviour
 
     public collisionManager colMan;
 
+    public CameraShake cs;
+
     float map(float s, float a1, float a2, float b1, float b2)
 {
     return b1 + (s-a1)*(b2-b1)/(a2-a1);
@@ -109,10 +111,15 @@ float amountToRoll = 0f;
         if(newControls.Player.DodgeRollLeft.triggered){
             currLength = dodgeRollLength;
             dodgeRollVelocity = -dodgeRollSpeed;
+
+            
+            
         }
         if(newControls.Player.DodgeRollRight.triggered){
             currLength = dodgeRollLength;
             dodgeRollVelocity = dodgeRollSpeed;
+            
+            
         }
 
         if(newControls.Player.Boost.ReadValue<float>() > 0.1f){
