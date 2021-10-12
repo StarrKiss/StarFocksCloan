@@ -5,7 +5,10 @@
     "com.unity.ide.rider": "3.0.7",
     "com.unity.ide.visualstudio": "2.0.11",
     "com.unity.ide.vscode": "1.2.4",
+<<<<<<< HEAD
     "com.unity.inputsystem": "1.0.2",
+=======
+>>>>>>> 9c51adb5697c02b0d9688c95f5ec3518beb9e364
     "com.unity.render-pipelines.universal": "11.0.0",
     "com.unity.test-framework": "1.1.29",
     "com.unity.textmeshpro": "3.0.6",
